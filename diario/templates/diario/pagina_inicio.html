@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Diario de Matias</title>
+</head>
+<body>
+    <h1>Codigo Suelto</h1>
+    <p>Hola!</p>
+    <p>Funciona!</p>
+    <hr>
+    <header>
+        Este es el encabezado.
+    </header>
+    <hr>
+    <main>
+        <article>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum nobis dolore molestiae rem ipsam repellat, quisquam non natus, nulla assumenda accusantium numquam molestias recusandae perferendis ipsa voluptates iste? Eligendi, maxime!
+        </article>
+        <hr>
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum facere earum atque, doloremque ducimus voluptatibus? Distinctio nemo quos assumenda maxime, eum exercitationem unde praesentium hic a tempora est quia voluptate.
+        </article>
+        <hr>
+        <article>
+            {{ articulos }}
+        </article>
+        <hr>
+        {% for articulo in articulos %} 
+            <article>
+                {{ articulo }}
+                <hr>
+            </article>
+        {% endfor %}
+        <hr>
+        <div>
+            {% for articulo in articulos %}
+                <article>
+                    <h1>
+                        Autor: {{ articulo.autor }}
+                    </h1>
+                    <p>
+                        Titulo: {{ articulo.titulo }}
+                    </p>
+                    <p>
+                        Columna: {{ articulo.texto }}
+                    </p>
+                    <p>
+                        Dia Creada: {{ articulo.dia_creada }}
+                    </p>
+                    <p>
+                        Dia Publicada: {{ articulo.dia_publicada }}
+                    </p>
+                </article>
+            {% endfor %}
+        </div>
+    </main>
+    <hr>
+    <footer>
+        Este es el pie de Pagina
+    </footer>
+</body>
+</html>
